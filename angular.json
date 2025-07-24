@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/expenditure",
+            "outputPath": "www",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,22 +27,29 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+             "src/styles.css",
+             "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+             "./node_modules/bootstrap-icons/font/bootstrap-icons.css",
+             "./public/css/aos.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+               "./public/js/aos.js",
+               "./public/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "4MB",
+                  "maximumError": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4MB",
+                  "maximumError": "3MB"
                 }
               ],
               "outputHashing": "all"
@@ -85,9 +92,16 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.css",
+             "./public/css/aos.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+               "./public/js/aos.js",
+               "./public/js/custom.js"
+            ]
           }
         }
       }
